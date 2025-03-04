@@ -2,40 +2,90 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>自己紹介ページ</title>
+  <title>自己紹介とプロジェクトページ</title>
   <link rel="stylesheet" href="index.css">
 </head>
 <body>
   <header>
-    <h1>自分の名前</h1>
-    <nav>
-      <ul>
-        <li><a href="#about">About Me</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+    <div class="nav-container">
+      <h1 class="site-title">自分の名前</h1>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#research">Research Projects</a></li>
+          <li><a href="#other">Other Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
-  
+
   <main>
-    <section id="about">
-      <h2>自己紹介</h2>
-      <!-- 顔写真をここに追加 -->
-      <img src="face.JPG" alt="顔写真" class="profile-photo">
-      <p>ここに自己紹介の文章を記入して、どんな人かを説明するんや。</p>
+    <!-- メインセクション: 自己紹介 -->
+    <section id="home" class="main-section">
+      <div class="self-intro">
+        <img src="face.jpg" alt="顔写真" class="profile-photo">
+        <div class="intro-text">
+          <h2>自己紹介</h2>
+          <p><strong>所属大学:</strong> 〇〇大学</p>
+          <p><strong>Research Interest:</strong> コンピュータサイエンス、人工知能、機械学習</p>
+          <p><strong>コンタクト:</strong>
+            <a href="mailto:example@example.com">メール</a> | 
+            <a href="https://twitter.com/yourhandle" target="_blank">Twitter</a>
+          </p>
+          <p>ここに自分の自己紹介文を詳しく記述する。シンプルでスタイリッシュなデザインを意識して、顔も自己紹介も大きく目立つようにしてるんや。</p>
+        </div>
+      </div>
     </section>
-    
-    <section id="projects">
-      <h2>プロジェクト紹介</h2>
-      <p>自分が関わってるプロジェクトや作った作品の紹介を記入するで。</p>
+
+    <!-- サブセクション: Research Projects -->
+    <section id="research" class="sub-section">
+      <h2>Research Projects</h2>
+      <div class="projects-container">
+        <!-- プロジェクト項目の例 -->
+        <div class="project-item">
+          <a href="https://example.com/project1" target="_blank">
+            <img src="research1.jpg" alt="プロジェクト1の画像">
+            <h3>プロジェクト1</h3>
+          </a>
+        </div>
+        <div class="project-item">
+          <a href="https://example.com/project2" target="_blank">
+            <img src="research2.jpg" alt="プロジェクト2の画像">
+            <h3>プロジェクト2</h3>
+          </a>
+        </div>
+        <!-- 必要に応じて追加 -->
+      </div>
     </section>
-    
-    <section id="contact">
-      <h2>連絡先</h2>
-      <p>連絡先やSNSのリンクを貼っとくとええな。</p>
+
+    <!-- サブセクション: Other Projects -->
+    <section id="other" class="sub-section">
+      <h2>Other Projects</h2>
+      <div class="projects-container">
+        <div class="project-item">
+          <a href="https://example.com/other1" target="_blank">
+            <img src="other1.jpg" alt="その他プロジェクト1の画像">
+            <h3>その他プロジェクト1</h3>
+          </a>
+        </div>
+        <div class="project-item">
+          <a href="https://example.com/other2" target="_blank">
+            <img src="other2.jpg" alt="その他プロジェクト2の画像">
+            <h3>その他プロジェクト2</h3>
+          </a>
+        </div>
+        <!-- 必要に応じて追加 -->
+      </div>
+    </section>
+
+    <!-- サブセクション: Contact -->
+    <section id="contact" class="sub-section">
+      <h2>Contact</h2>
+      <p>連絡先の詳細やSNSリンクをここに記載するで。メールアドレスやその他の情報を追記してな。</p>
     </section>
   </main>
-  
+
   <footer>
     <p>© 2025 自分の名前. All rights reserved.</p>
   </footer>
