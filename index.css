@@ -7,9 +7,9 @@ body {
   padding: 0;
 }
 
-/* ヘッダーのスタイル */
+/* ヘッダーのスタイル（水色） */
 header {
-  background-color: #4CAF50;
+  background-color: #a7dff2; /* 水色 */
   padding: 20px;
   color: #fff;
   text-align: center;
@@ -30,18 +30,30 @@ header nav ul li a {
   text-decoration: none;
 }
 
-/* メインコンテンツのスタイル */
+/* メインコンテンツのスタイル（ピンクを背景に） */
 main {
   padding: 20px;
 }
 
 section {
   margin-bottom: 40px;
+  background-color: #ffb6c1; /* ピンク */
+  padding: 20px;
+  border-radius: 8px;
 }
 
-/* フッターのスタイル */
+/* 顔写真のスタイル */
+.profile-photo {
+  width: 150px;        /* 写真の大きさは調整可能や */
+  height: 150px;
+  border-radius: 50%;  /* 丸くする */
+  display: block;
+  margin: 0 auto 20px; /* 中央に寄せる */
+}
+
+/* フッターのスタイル（グレー） */
 footer {
-  background-color: #ddd;
+  background-color: #d3d3d3; /* グレー */
   padding: 10px;
   text-align: center;
 }
