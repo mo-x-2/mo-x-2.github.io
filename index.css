@@ -6,21 +6,25 @@
 }
 
 body {
-  font-family: "Helvetica Neue", Arial, sans-serif;
-  background-color: #f5f5f5;
+  font-family: "Helvetica", sans-serif;
+  background-color: #fffdfd;
   color: #333;
   line-height: 1.6;
 }
 
 /* ヘッダー：右上に固定ナビゲーション */
 header {
-  background-color: #fff;
-  border-bottom: 1px solid #ddd;
+  background-color: #d4effe;
+  border-bottom: 1px solid #c8c8c8;
   padding: 10px 20px;
   position: fixed;
   top: 0;
+  right: 0;
   width: 100%;
   z-index: 1000;
+  text-align: right;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .nav-container {
@@ -45,59 +49,69 @@ header nav ul li {
 
 header nav ul li a {
   text-decoration: none;
+  /* font-family: Futura, sans-serif; */
   color: #333;
-  font-weight: 500;
+  font-weight: bold;
   transition: color 0.3s;
 }
 
 header nav ul li a:hover {
-  color: #a7dff2; /* 水色のホバー */
+  color: #2b85df; /* 水色のホバー */
 }
 
-/* メインセクション（自己紹介）：ピンク */
+/* メインセクション（自己紹介） */
 .main-section {
-  background-color: #fac7ed; /* やわらかいピンク */
+  background-color: #ffffff; 
   padding: 100px 20px 60px; /* 固定ヘッダー分上部に余白 */
   text-align: center;
 }
 
 .self-intro {
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  align-items: flex-start;  /* 上端揃えで配置 */
+  gap: 40px;  /* 要素間の間隔 */
+  padding: 20px;
 }
 
 .profile-photo {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
+  width: 300px;  /* 画像サイズ */
+  height: 300px;
   object-fit: cover;
-  margin-bottom: 20px;
-  border: 5px solid #a7dff2; /* 水色の枠でアクセント */
+  flex-shrink: 0;  /* 画像サイズを固定 */
+  border-radius: 50%;  /* 円形にする */
+}
+
+.intro-text {
+  flex: 1;  /* 残りのスペースを文章が占める */
+  text-align: left;  /* 文章を左揃えに */
 }
 
 .intro-text h2 {
+  margin-bottom: 20px;
   font-size: 2rem;
-  margin-bottom: 10px;
+  color: #f3629e; /* ピンク色に変更 */
+  font-family: Futura, sans-serif; /* Futuraフォントを追加 */
 }
 
 .intro-text p {
-  margin-bottom: 10px;
-  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 15px;
 }
 
-/* サブセクション：Research Projects, Other Projects, Contact（水色） */
+/* サブセクション */
 .sub-section {
-  background-color: #a7dff2; /* やわらかい水色 */
+  background-color: #ffffff; 
   padding: 60px 20px;
   text-align: center;
 }
 
 .sub-section h2 {
-  font-size: 2rem;
+  font-size: 1.8rem;
   margin-bottom: 20px;
+  color: #f3629e; /* ピンク色に変更 */
+  font-family: Futura, sans-serif; /* Futuraフォントを追加 */
 }
 
 /* プロジェクトコンテナ */
@@ -109,28 +123,44 @@ header nav ul li a:hover {
 }
 
 .project-item {
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
+  position: relative;
   width: 300px;
+  height: 200px;
+  border-radius: 8px;
   overflow: hidden;
   transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer; /* カーソルをポインターに変更 */
+}
+
+.project-item a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  border-bottom: none; /* 下線を削除 */
+  background-color: transparent; /* 背景色を削除 */
 }
 
 .project-item:hover {
   transform: translateY(-5px);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 .project-item img {
   width: 100%;
-  height: 200px;
+  height: 100%;
   object-fit: cover;
 }
 
 .project-item h3 {
-  padding: 10px;
-  font-size: 1.2rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 15px;
+  font-size: 1rem;
+  color: #fff;
+  margin: 0;
 }
 
 /* フッター */
@@ -144,4 +174,68 @@ footer {
 /* 固定ヘッダーの下にメインコンテンツを配置 */
 main {
   margin-top: 70px;
+}
+
+/* リンクの基本スタイル */
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+/* ヘッダーナビゲーションのリンク */
+header nav a {
+  border-bottom: none;
+}
+
+/* 本文中のリンク */
+main a {
+  border-bottom: 1px dotted #999;
+}
+
+/* ホバー時のスタイル */
+a:hover {
+  color: #2b85df;
+  transition: color 0.3s;
+}
+
+/* 本文中のリンクのホバー時 */
+main a:hover {
+  border-bottom: 1px solid #2b85df;
+}
+
+
+/* プロジェクト詳細ページのスタイル */
+.project-detail {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.project-detail h1 {
+  font-size: 2rem; 
+  color: #f3629e;
+  font-family: Futura, sans-serif; /* Futuraフォントを追加 */
+  margin-bottom: 30px;
+}
+
+.project-detail img {
+  width: 90%;
+  max-width: 800px;
+  height: auto;
+  margin: 0 auto 40px;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.project-content {
+  line-height: 1.6; 
+  font-size: 0.9rem; /* フォントサイズを小さく */
+}
+
+.project-content p {
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 0.9rem; /* フォントサイズを小さく */
 }
