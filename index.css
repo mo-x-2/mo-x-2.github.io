@@ -9,7 +9,8 @@ body {
   font-family: "Helvetica", sans-serif;
   background-color: #fffdfd;
   color: #333;
-  line-height: 1.6;
+  line-height: 1.8;
+  font-size: 1.2rem;
 }
 
 /* ヘッダー：右上に固定ナビゲーション */
@@ -51,6 +52,7 @@ header nav ul li a {
   text-decoration: none;
   /* font-family: Futura, sans-serif; */
   color: #333;
+  font-size: 2rem; /* フォントサイズを大きく */
   font-weight: bold;
   transition: color 0.3s;
 }
@@ -90,7 +92,7 @@ header nav ul li a:hover {
 
 .intro-text h2 {
   margin-bottom: 20px;
-  font-size: 2rem;
+  font-size: 3rem;
   color: #f3629e; /* ピンク色に変更 */
   font-family: Futura, sans-serif; /* Futuraフォントを追加 */
 }
@@ -108,7 +110,7 @@ header nav ul li a:hover {
 }
 
 .sub-section h2 {
-  font-size: 1.8rem;
+  font-size: 2.5rem;
   margin-bottom: 40px;
   color: #f3629e; /* ピンク色に変更 */
   font-family: Futura, sans-serif; /* Futuraフォントを追加 */
@@ -124,8 +126,8 @@ header nav ul li a:hover {
 
 .project-item {
   position: relative;
-  width: 300px;
-  height: 200px;
+  width: 400px;
+  height: 300px;
   border-radius: 8px;
   overflow: hidden;
   transition: transform 0.3s, box-shadow 0.3s;
@@ -158,7 +160,7 @@ header nav ul li a:hover {
   left: 0;
   right: 0;
   padding: 15px;
-  font-size: 1rem;
+  font-size: 1.5rem;
   color: #fff;
   margin: 0;
 }
@@ -168,7 +170,7 @@ footer {
   background-color: #ddd;
   text-align: center;
   padding: 15px 20px;
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 /* 固定ヘッダーの下にメインコンテンツを配置 */
@@ -213,7 +215,7 @@ main a:hover {
 }
 
 .project-detail h1 {
-  font-size: 2rem; 
+  font-size: 3rem; 
   color: #f3629e;
   font-family: Futura, sans-serif; /* Futuraフォントを追加 */
   margin-bottom: 30px;
@@ -230,14 +232,14 @@ main a:hover {
 }
 
 .project-content {
-  line-height: 1.6; 
-  font-size: 0.9rem; /* フォントサイズを小さく */
+  line-height: 1.8; 
+  font-size: 1.2rem; /* フォントサイズを小さく */
 }
 
 .project-content p {
   margin-bottom: 30px;
   text-align: center;
-  font-size: 0.9rem; /* フォントサイズを小さく */
+  font-size: 1.2rem; /* フォントサイズを小さく */
 }
 
 /* タイムライン表示のスタイル */
